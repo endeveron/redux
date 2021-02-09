@@ -1,6 +1,6 @@
-export const createStore = (rootReducer, initialState) => {
+export const createStore = (rootReducer) => {
 
-  let state = rootReducer(initialState, { type: '__INIT__' })
+  let state = rootReducer(initialState, { type: '' })
   const subscribers = []
 
   return {

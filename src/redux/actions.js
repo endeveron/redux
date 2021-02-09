@@ -1,4 +1,6 @@
-import { DECREMENT, INCREMENT } from "./types";
+import { DECREMENT, INCREMENT, CHANGE_THEME } from "./types";
+
+// COUNTER
 
 export const increment = () => ({ type: INCREMENT })
 export const decrement = () => ({ type: DECREMENT })
@@ -9,3 +11,8 @@ export const asyncIncrement = () => dispatch => {
     dispatch(increment())
   }, 2000)
 }
+
+
+// THEME
+
+export const changeTheme = () => ({ type: CHANGE_THEME })

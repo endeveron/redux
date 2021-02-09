@@ -1,6 +1,7 @@
-import { DECREMENT, INCREMENT } from "./types"
+import { combineReducers } from "redux"
+import { DECREMENT, INCREMENT, CHANGE_THEME } from "./types"
 
-export const rootReducer = (state, action) => {
+const counterReducer = (state = 0, action) => {
   switch (action.type) {
     case INCREMENT:
       return state + 1
@@ -9,3 +10,19 @@ export const rootReducer = (state, action) => {
     default: return state
   }
 }
+
+const themeReducer = (state = { value: 'light' }, action) => {
+  switch (action.type) {
+    case CHANGE_THEME:
+      return {
+        ...state,
+        value: state.value === 'light' ? 'dark' : 'light'
+      }
+    default: return state
+  }
+}
+
+export const rootReducer = combineReducers({
+  counter: counterReducer,
+  theme: themeReducer
+})

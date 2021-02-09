@@ -1,6 +1,7 @@
 const customLogger = state => next => action => {
   const newState = next(action)
-  console.log('state', state.getState(), '| action', action)
+  const s = state.getState()
+  console.log('counter', s.counter, '| theme', s.theme, '| action', action)
   return newState
 }
 
