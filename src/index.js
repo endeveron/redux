@@ -29,6 +29,8 @@ store.subscribe(() => {
   counter.textContent = state
 })
 
+store.dispatch({ type: 'INIT_APP' })
+
 // themeBtn.addEventListener('click', () => {
 //   // document.body.classList.toggle('dark')
 // })
