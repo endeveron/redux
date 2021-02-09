@@ -13,8 +13,8 @@ const themeBtn = document.getElementById('theme')
 
 const store = createStore(
   rootReducer,
-  0,
-  applyMiddleware(thunk)
+  0,                        // initial state
+  applyMiddleware(thunk)    // enhancer
 )
 
 addBtn.addEventListener('click', () => {
