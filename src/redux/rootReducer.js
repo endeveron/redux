@@ -1,4 +1,4 @@
-import { DECREMENT, INCREMENT } from "./types"
+import { ASYNC_INCREMENT, DECREMENT, INCREMENT } from "./types"
 
 export const rootReducer = (state, action) => {
   switch (action.type) {
